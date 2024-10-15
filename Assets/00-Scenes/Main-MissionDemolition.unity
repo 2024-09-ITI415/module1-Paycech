@@ -926,6 +926,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8dafa51759520d459735853570eb7a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  uitLevel: {fileID: 1783146415}
+  uitShots: {fileID: 961756611}
+  uitButton: {fileID: 1138324591}
+  castlePos: {x: 50, y: -9.5, z: 0}
+  castles:
+  - {fileID: 2014785075162740359, guid: 677f707da1601924eb292dbe331793ac, type: 3}
+  - {fileID: 2014785075162740359, guid: 3bbe699808a26fe4bbbfb7b08f05636c, type: 3}
+  - {fileID: 2014785075162740359, guid: 87d8253fd4371ee4eab01eff5b92e34d, type: 3}
+  level: 0
+  levelMax: 0
+  shotsTaken: 0
+  castle: {fileID: 0}
+  mode: 0
+  showing: Show Slingshot
 --- !u!1 &845851863
 GameObject:
   m_ObjectHideFlags: 0
@@ -1131,7 +1145,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1005010268}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 792234111}
+        m_TargetAssemblyTypeName: MissionDemolition, Assembly-CSharp
+        m_MethodName: SwitchView
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1005010268
 MonoBehaviour:
   m_ObjectHideFlags: 0
