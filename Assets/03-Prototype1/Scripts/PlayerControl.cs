@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
+using TMPro;
 
 public class PlayerController : MonoBehaviour
 {
@@ -35,23 +37,23 @@ public class PlayerController : MonoBehaviour
         movementY = movementVector.y;
     }
 
-    void Update ()
-     {
+    void Update()
+    {
         if (Input.GetButtonDown("Jump") && onGround)
         {
             rb.AddForce(Vector3.up * jump, ForceMode.Impulse);
             onGround = false;
         }
-     }
+    }
 
-    private void OnCollisionEnter(Collision collision)
+    void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Ground"))
         {
             onGround = true;
         }
     }
-    
+
 
     // FixedUpdate is called once per fixed frame-rate frame.
     private void FixedUpdate()
@@ -62,6 +64,4 @@ public class PlayerController : MonoBehaviour
         // Apply force to the Rigidbody to move the player.
         rb.AddForce(movement * speed);
     }
-
-    
 }
