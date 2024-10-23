@@ -44,6 +44,10 @@ public class PlayerController : MonoBehaviour
             rb.AddForce(Vector3.up * jump, ForceMode.Impulse);
             onGround = false;
         }
+        if (this.transform.position.y < 0)
+        {
+            SceneManager.LoadScene("SceneMain");
+        }
     }
 
     void OnCollisionEnter(Collision collision)
